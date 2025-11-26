@@ -6,7 +6,7 @@
 /*   By: lucinguy <lucinguy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 11:45:38 by lucinguy          #+#    #+#             */
-/*   Updated: 2025/11/26 16:05:47 by lucinguy         ###   ########.fr       */
+/*   Updated: 2025/11/26 18:27:27 by lucinguy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,8 @@
 
 size_t	ft_putchar_fd_pf(char c, int fd)
 {
-	size_t	i;
-
 	write(fd, &c, 1);
-	i = 1;
-	return (i);
+	return (1);
 }
 
 size_t	ft_putstr_fd_pf(char const *s, int fd)
