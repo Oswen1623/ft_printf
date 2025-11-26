@@ -6,34 +6,31 @@
 /*   By: lucinguy <lucinguy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 11:45:38 by lucinguy          #+#    #+#             */
-/*   Updated: 2025/11/25 14:32:29 by lucinguy         ###   ########.fr       */
+/*   Updated: 2025/11/26 16:05:47 by lucinguy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_comp(char c, char set)
+size_t	ft_putchar_fd_pf(char c, int fd)
 {
-	if (c == set)
-		return (1);
-	else
-		return (0);
+	size_t	i;
+
+	write(fd, &c, 1);
+	i = 1;
+	return (i);
 }
-int	ft_putchar(char c)
+
+size_t	ft_putstr_fd_pf(char const *s, int fd)
 {
-	write(1, &c, 1);
-	return (1);
-}
-int	ft_putstr(char const *s)
-{
-	int	i;
+	size_t i;
 
 	i = 0;
 	if (!s)
-		return ;
+		return (0);
 	while (s[i])
 	{
-		ft_putchar(s[i]);
+		ft_putchar_fd_pf(s[i], fd);
 		i++;
 	}
 	return (i);
