@@ -6,7 +6,7 @@
 #    By: lucinguy <lucinguy@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/29 16:49:33 by lucinguy          #+#    #+#              #
-#    Updated: 2025/11/20 18:24:54 by lucinguy         ###   ########.fr        #
+#    Updated: 2025/11/25 12:45:46 by lucinguy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,13 +15,16 @@ CC          := cc
 CFLAGS      := -Wall -Wextra -Werror
 AR          := ar rcs
 RM          := rm -f
-INCS        := -I libft.h -I ft_printf.h
+INCS        := -I libft/libft.h -I ft_printf.h
 LIBFT		:= libft/libft.a
 
 # --Mandatory-- #
 
 SRCS := \
 	ft_printf.c \
+	ft_printf_utils.c
+	conv.c
+	checktype.c
 	\
 	libft/ft_atoi.c \
 	libft/ft_bzero.c \
